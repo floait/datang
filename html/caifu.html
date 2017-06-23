@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>财富</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta name="format-detection" content="telephone=no">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/weui.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/jquery-weui.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/font_main/iconfont.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/mains.css">
+	<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../asset/js/jquery-weui.min.js"></script>
+	<script type='text/javascript' src='../asset/js/swiper.min.js' charset='utf-8'></script>
+	<style type="text/css">
+	
+	.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 0px; }
+	.swiper-pagination-bullet-active{background:#0383fe;}
+	</style>
+</head>
+<body>
+	<header>		
+		<div class="header_top caifu-bar">
+			<i class="iconfont arrow">&#xe604;</i>
+			财富
+		</div>
+	</header>
+	<div class="content caifu">
+		<div class="caifu-top">
+			<div class="empty"></div>
+			<p>现金账户</p>
+			<div class="money">
+				<span>￥</span>
+				<span class="f-fsize25">0.00</span>
+				<a href="zhanghu.html"><i class="iconfont fr f-colorwhite">&#xe62b;</i></a>
+			</div>			
+		</div>
+		<div class="center">
+			<a href="#">
+				<div class="fl f-width50 u-kuai f-borderR f-borderB">
+					<i class="iconfont">&#xe61c;</i>
+					<div>
+						<p>积分</p>
+						<p>0.00</p>
+					</div>
+				</div>
+			</a>
+			
+				<div class="fl f-width50 u-kuai f-borderB">
+					<i class="iconfont" style="font-size: 27px;">&#xe603;</i>
+					<a href="#">
+						<div>
+							<p>唐宝</p>
+							<p>0.00</p>
+							
+						</div>
+					</a>
+					<span class="u-btext tixian">提现</span>
+				</div>
+			
+			
+				<div class="fl f-width50 u-kuai f-borderR f-borderB">
+					<i class="iconfont">&#xe65b;</i>
+					<a href="#">
+						<div>
+							<p>库存积分</p>
+							<p>0.00</p>						
+						</div>
+					</a>
+					<span class="u-btext buy">购买</span>
+					
+				</div>
+			</a>
+			<a href="#">
+				<div class="fl f-width50 u-kuai f-borderB">
+					<i class="iconfont">&#xe655;</i>
+					<div>
+						<p>当面付</p>
+					</div>
+				</div>
+			</a>	
+		</div>
+		<div class="empty10" style="background: #efefef"></div>
+		<div class="shuju-tit f-borderB">
+			<i class="iconfont">&#xe6af;</i>
+			数据统计
+		</div>
+		<div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+		  <div class="swiper-wrapper">
+		    <div class="swiper-slide m-shujuInfo">
+				<div class="u-shuju-kuai fl f-marginR5">
+				<p class="f-shengnuehao">上一天新增积分总量</p>
+				<p class="f-shengnuehao">1111111111</p>
+			</div>
+			<div class="u-shuju-kuai fl">
+				<p class="f-shengnuehao">上一天新增积分总量</p>
+				<p class="f-shengnuehao">1111111111</p>
+			</div>
+		    </div>
+		    <div class="swiper-slide m-shujuInfo">
+				<div class="u-shuju-kuai fl f-marginR5">
+					<p class="f-shengnuehao">上一天奖励积分总量</p>
+					<p class="f-shengnuehao">1111111111</p>
+				</div>
+				<div class="u-shuju-kuai fl">
+					<p class="f-shengnuehao">上一天每单元转换唐元数</p>
+					<p class="f-shengnuehao">1111111111</p>
+				</div>
+		    </div>
+		  </div>
+		  <div class="swiper-pagination"></div>
+		</div>
+	<div class="empty10" style="background: #efefef"></div>
+		
+	</div>
+<script type="text/javascript">
+$(function(){
+	$(".tixian").on("click",function(){
+		window.location.href="##";
+	})
+	$(".buy").on("click",function(){
+		window.location.href="##";
+	})
+
+	 $(".swiper-container").swiper({
+        loop: true,
+        autoplay: 3000
+      });
+
+})
+</script>
+</body>
+</html>

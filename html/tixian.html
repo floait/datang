@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提现</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta name="format-detection" content="telephone=no">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/weui.min.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/jquery-weui.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/font_main/iconfont.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/mains.css">
+	<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../asset/js/jquery-weui.min.js"></script>
+	<style type="text/css">
+	body{background:#efefef; }
+	.u-bggray{background: #c5c4c4;}
+	.m-wrap{padding: 15px 10px;}
+	.gray{color: gray;}
+	.blue{color: #3e78e6;font-size: 25px;}
+	.bg_white{background: white !important;}
+	.f-marginT10 {margin-top: 10px !important;}
+	.line {background: #f5f4f4;color: black;padding: 0 10px; height: 35px;line-height: 35px;border-radius: 5px;font-size: 15px;}
+	.f-tal{text-align: left;}
+	.add{position: absolute;right: 5px;}
+	.line2{background: white;}
+	</style>
+</head>
+<body>
+	<header class="relative">		
+		<div class="header_top caifu-bar">
+			<a href="record.html"><i class="iconfont arrow f-colorwhite">&#xe604;</i></a>
+				提现	
+			<span class="u-textR record" data-num="0">记录</span>
+		</div>
+		<div class="record_xiala" style="display: none;">
+			<a href="record.html"><div>现金记录</div></a>
+			<a href="record.html"><div>唐宝记录</div></a>
+		</div>
+	</header>
+	<div class="content">
+		<div class="tixian">
+			<div class="bg_white m-wrap">
+				<div class="line f-marginB15 tab1">
+					<span class="f-fsize14 f-marginR15">现金提现</span>
+					<span class="f-fsize13 f-colorgray">余额</span>
+					<span class="f-fsize15 f-colorblue money">1111.11</span>
+					<span class="f-fsize15">元</span>
+					<i class="iconfont fr f-fsize25 gray blue ">&#xe601;</i>
+				</div>
+				<div class="line tab2">
+					<span class="f-fsize14 f-marginR15">唐宝提现</span>
+					<span class="f-fsize13 f-colorgray">余额</span>
+					<span class="f-fsize15 f-colorblue money">611.22</span>
+					<span class="f-fsize15">个</span>
+					<i class="iconfont fr f-fsize25 gray">&#xe601;</i>
+				</div>				
+			</div>
+			<div class="div1">
+				<div class="inputGroup bg_white f-borderT">
+					<div class="input-group f-relative">
+						  <span class="input-group-addon bg_white f-colorblack">
+						  	提现金额
+						  </span>
+						  <input type="number" class="form-control" placeholder="请输入提取的金额" aria-describedby="basic-addon1" style="width: 70%">
+						  <span class="f-colorblue f-absoluteR allTiXian1" style="top:22%;font-size: 15px;">全部提现</span>
+					</div>
+					<a href="javascript:;" id='show-actions' class="">
+						<div class="line bg_white f-borderT fei1 feilv" style="border-top: 1px solid #dedede" data-fei="0.03">
+							T+3&nbsp;到账时间&nbsp;3个工作日&nbsp;手续费3%
+							<i class="iconfont arrow fr">&#xe62b;</i>
+						</div>
+					</a>
+					<div class="line bg_white" style="border-top: 1px solid #dedede">
+						实际到账金额&nbsp;&nbsp;￥
+						<span class="actMoeney1 actMoeney" data-val="1">0.00</span>		
+					</div>			
+				</div>
+				<p class="tip f-fsize13">提现金额必须大于100元,单次最大额度为5000元。每日可提现3次。提现排队(等待)时间均按工作日计算,如遇周末或节假日顺延!
+				</p>
+			</div>
+			<div class="div2" style="display: none;">
+				<div class="inputGroup bg_white f-borderT">
+					<div class="input-group f-relative">
+						  <span class="input-group-addon bg_white f-colorblack">
+						  	提现唐宝
+						  </span>
+						  <input type="number" class="form-control" placeholder="请输入提取的唐宝数量" aria-describedby="basic-addon1" style="width: 70%">
+						  <span class="f-colorblue f-absoluteR allTiXian2" style="top:22%;font-size: 15px;">全部提现</span>
+					</div>
+					<a href="javascript:;" id='show-actions2' class="">
+						<div class="line bg_white f-borderT fei2 feilv" style="border-top: 1px solid #dedede" data-fei="0.00">
+							T+1&nbsp;到账时间&nbsp;1个工作日&nbsp;手续费0%
+							<i class="iconfont arrow fr">&#xe62b;</i>
+						</div>
+					</a>
+					<div class="line bg_white" style="border-top: 1px solid #dedede">
+						实际到账金额&nbsp;&nbsp;￥
+						<span class="actMoeney2 actMoeney" data-val="2">0.00</span>		
+					</div>			
+				</div>
+				<p class="tip f-fsize13">
+					提现唐宝必须为100的倍数,单次提现唐宝必须大于10000个,不超过5000000个。每日提现不能超过3次。每日可提现3次。提现排队(等待)时间均按工作日计算,如遇周末或节假日顺延!
+				</p>
+			</div>
+			
+			<a href="#" class="u-btnChongA">
+				<div class="u-btn u-btnChong u-bggray">提现</div>
+			</a>
+			<p class="tip f-fsize13 f-tac">使用
+				<span class="bank" data-bank="中国农业银行">中国农业银行</span>(
+				<span class="numBack4" data-numBack4="3877">3877</span>
+				)提现
+				<a href="javascript:;" id='show-actions3' class="">
+					<span class="f-marginL5 f-colorblue">更换</span>
+				</a>
+				<!-- <a href="myBankCard.html">
+					<span class="f-marginL5 f-colorblue">更换</span>
+				</a> -->
+			</p>
+		</div>		
+	</div>
+<script type="text/javascript">
+$(function(){
+
+	$(".record").on("click",function(){
+		var num=$(this).attr("data-num");
+		if(num==0){
+			$(".record_xiala").fadeIn();
+			$(this).attr("data-num",1);
+		}else{
+			$(".record_xiala").fadeOut();
+			$(this).attr("data-num",0);
+		}		
+	})
+
+
+	qiehuan(".tab1",".div1",".div2",".tab2");
+	qiehuan(".tab2",".div2",".div1",".tab1");
+
+	function qiehuan(tabA,divA,divB,tabB){
+		$(tabA).on("click",function(){
+			$(divA).show();
+			$(divB).hide();
+			$(this).children(".iconfont").addClass("blue");
+			$(tabB).children(".iconfont").removeClass("blue")
+		})
+	}
+	
+	function toDecimal2(x) { 
+      var f = parseFloat(x); 
+      if (isNaN(f)) { 
+        return false; 
+      } 
+      var f = Math.round(x*100)/100; 
+      var s = f.toString(); 
+      var rs = s.indexOf('.'); 
+      if (rs < 0) { 
+        rs = s.length; 
+        s += '.'; 
+      } 
+      while (s.length <= rs + 2) { 
+        s += '0'; 
+      } 
+      return s; 
+    } 
+
+	$(".allTiXian1").on("click",function(){
+		var money1=$(".tab1").children(".money").text();	
+		var tab1Money=parseFloat($(".tab1").children(".money").text());
+		var dataFei=$(".fei1").attr("data-fei");
+		var actMoeney=tab1Money-parseFloat(tab1Money*dataFei);
+		if(100<tab1Money&&tab1Money<5000){
+			$(".div1").find(".form-control").val(money1);		
+			$(".u-btnChong").removeClass("u-bggray");
+			$(".u-btnChongA").attr("href","###");//正确跳转地址
+			$(".actMoeney1").text(toDecimal2(actMoeney));
+		}else if(tab1Money>5000){		
+			$(".div1").find(".form-control").val(5000);
+			$(".u-btnChong").removeClass("u-bggray");			
+			$(".u-btnChongA").attr("href","###");//正确跳转地址,请改变
+			actMoeney=5000-5000*dataFei;
+			$(".actMoeney1").text(toDecimal2(actMoeney));
+		}else{
+			$(".div1").find(".form-control").val(0.00);			
+			$(".u-btnChong").addClass("u-bggray");
+			$(".u-btnChongA").attr("href","#");//假跳转地址,保持不变
+			$(".actMoeney1").text(0.00);
+		}
+	})
+
+	$(".allTiXian2").on("click",function(){
+		var money1=parseInt($(".tab2").children(".money").text());
+		var num=money1%100;
+		var a=money1-num;
+		var dataFei=$(".fei2").attr("data-fei");
+		console.log(dataFei)
+		var actMoeney=parseInt((a-parseInt(a*dataFei))/100);
+		if(a>100&&a<5000000){		
+			$(".div2").find(".form-control").val(a);
+			$(".u-btnChong").removeClass("u-bggray");			
+			$(".u-btnChongA").attr("href","###");//正确跳转地址,请改变
+			$(".actMoeney2").text(actMoeney);
+
+		}else if(a>5000000){
+			$(".div2").find(".form-control").val(5000000);
+			$(".u-btnChong").removeClass("u-bggray");			
+			$(".u-btnChongA").attr("href","###");//正确跳转地址,请改变
+			actMoeney=parseInt((5000000-parseInt(5000000*dataFei))/100);
+			$(".actMoeney2").text(actMoeney);
+		}else{
+			$(".div2").find(".form-control").val(0.00);			
+			$(".u-btnChong").addClass("u-bggray");
+			$(".u-btnChongA").attr("href","#");//假跳转地址,保持不变
+			$(".actMoeney2").text(0);
+
+		}
+	})
+
+	$(".form-control").bind("input propertychange",function(){
+		$(".u-btnChong").removeClass("u-bggray");
+		$(".u-btnChongA").attr("href","###");//正确跳转地址,请改变
+		var a=$(this).val();
+			a=parseInt(a);
+		var actFei=$(this).parent().parent().find(".feilv").attr("data-fei");
+		var actMoeney=a-a*actFei;
+
+		console.log(actFei)
+		var actMoeneySpan=$(this).parent().parent().find(".actMoeney");
+		var val=$(this).parent().parent().find(".actMoeney").attr("data-val");
+		var tab1Money=parseInt($(".tab1").find(".money").text());
+		var tab2Money=parseInt($(".tab2").find(".money").text());
+		if(val==1){
+
+			actMoeneySpan.text(actMoeney);
+			if(a>tab1Money){
+				$(".u-btnChong").addClass("u-bggray");
+				$(".u-btnChongA").attr("href","#");//假跳转地址,保持不变
+			}
+		}
+		if(val==2){
+			actMoeneySpan.text(parseInt((actMoeney)/100));
+			if(a>tab2Money){
+				$(".u-btnChong").addClass("u-bggray");
+				$(".u-btnChongA").attr("href","#");//假跳转地址,保持不变
+			}
+		}
+		if($(this).val()==""){
+			$(".u-btnChong").addClass("u-bggray");
+			$(".u-btnChongA").attr("href","#");//假跳转地址,保持不变
+		}
+	})
+
+	/*现金取现的到账时间选择*/
+	 $(document).on("click", "#show-actions", function() {
+	 	var item="<div class='ine bg_white  fei1' style='color:#333;  font-size: 15px;' data-fei='0.07'>T+1&nbsp;到账时间&nbsp;1个工作日&nbsp;手续费0%<i class='iconfont arrow fr'>&#xe62b;</i></div>"
+	 	var item2="<div class='ine bg_white  fei1' style='color:#333;  font-size: 15px;' data-fei='0.03'>T+3&nbsp;到账时间&nbsp;3个工作日&nbsp;手续费3%<i class='iconfont arrow fr'>&#xe62b;</i></div>"
+	 	/*var item3="<div class='ine bg_white  fei1' style='color:#333;  font-size: 15px;' data-fei='0.01'>T+7&nbsp;到账时间&nbsp;7个工作日&nbsp;手续费1%<i class='iconfont arrow fr'>&#xe62b;</i></div>"*/
+							
+        $.actions({
+          title: "选择到账时间",
+          onClose: function() {
+            console.log("close");
+          },
+          actions: [
+            {
+              text: item,
+              className: "color-primary",
+              onClick: function() {
+               	$(".fei1").attr("data-fei",0.00);
+               	$(".fei1").html(item);
+               	var a=$(".div1").find(".form-control").val();
+               	$(".div1").find(".actMoeney").text(toDecimal2(a-a*0.00));
+              }
+            },
+            {
+              text: item2,
+              className: "color-warning",
+              onClick: function() {
+                $(".fei1").attr("data-fei",0.03);
+               	$(".fei1").html(item2);
+               	var a=$(".div1").find(".form-control").val();
+               	$(".div1").find(".actMoeney").text(toDecimal2(a-a*0.03));
+              }
+            },
+            /*{
+              text: item3,
+              className: 'color-danger',
+              onClick: function() {
+                $(".fei1").attr("data-fei",0.01);
+               	$(".fei1").html(item3);
+               	var a=$(".div1").find(".form-control").val();
+               	$(".div1").find(".actMoeney").text(toDecimal2(a-a*0.01));
+              }
+            }*/
+          ]
+        });
+      });
+
+	/*唐宝取现的到账时间选择*/
+	 $(document).on("click", "#show-actions2", function() {
+	 	var item="<div class='ine bg_white  fei1' style='color:#333;  font-size: 15px;' data-fei='0.07'>T+1&nbsp;到账时间&nbsp;1个工作日&nbsp;手续费7%<i class='iconfont arrow fr'>&#xe62b;</i></div>"
+	 	var item2="<div class='ine bg_white  fei1' style='color:#333;  font-size: 15px;' data-fei='0.03'>T+3&nbsp;到账时间&nbsp;3个工作日&nbsp;手续费3%<i class='iconfont arrow fr'>&#xe62b;</i></div>"
+	 	var item3="<div class='ine bg_white  fei1' style='color:#333;  font-size: 15px;' data-fei='0.01'>T+7&nbsp;到账时间&nbsp;7个工作日&nbsp;手续费1%<i class='iconfont arrow fr'>&#xe62b;</i></div>"
+							
+        $.actions({
+          title: "选择到账时间",
+          onClose: function() {
+            console.log("close");
+          },
+          actions: [
+            {
+              text: item,
+              className: "color-primary",
+              onClick: function() {
+               	$(".fei2").attr("data-fei",0.07);
+               	$(".fei2").html(item);
+               	var a=$(".div2").find(".form-control").val();
+               	$(".div2").find(".actMoeney").text(parseInt((a-a*0.07)/100));
+              }
+            },
+            {
+              text: item2,
+              className: "color-warning",
+              onClick: function() {
+                $(".fei2").attr("data-fei",0.03);
+               	$(".fei2").html(item2);
+               	var a=$(".div1").find(".form-control").val();
+               	$(".div2").find(".actMoeney").text(parseInt((a-a*0.03)/100));
+              }
+            },
+            {
+              text: item3,
+              className: 'color-danger',
+              onClick: function() {
+                $(".fei2").attr("data-fei",0.01);
+               	$(".fei2").html(item3);
+               	var a=$(".div2").find(".form-control").val();
+               	$(".div2").find(".actMoeney").text(parseInt((a-a*0.01)/100));
+              }
+            }
+          ]
+        });
+      });
+
+	 /*信用卡选择*/
+	 $(document).on("click", "#show-actions3", function() {
+	 	var title="<div class='f-tac f-relative'>选择提现方式<a href='myBankCard.html'><span class='fr add'>添加</span></a></div>"
+	 	var item="<div class='line line2'>"
+				+"<div class='f-marginB10 f-fsize15 f-tal'>"
+						+"<i class='iconfont arrow'>&#xe617;</i>"
+						+"<span class='bank' data-bank='中国农业银行'>"
+							+"中国农业银行"
+						+"</span>"
+						+"<div class='fr'>****&nbsp;****&nbsp;****&nbsp;"
+							+"<span class='numBack4' data-numBack4='3877'>"
+								+"3877"
+							+"</span>"
+						+"</div>"
+					+"</div>"
+				+"</div>"
+
+		var item2="<div class='line line2'>"
+				+"<div class='f-marginB10 f-fsize15 f-tal'>"
+						+"<i class='iconfont arrow'>&#xe617;</i>"
+						+"<span class='bank' data-bank='中国建设银行'>"
+							+"中国建设银行"
+						+"</span>"
+						+"<div class='fr'>****&nbsp;****&nbsp;****&nbsp;"
+							+"<span class='numBack4' data-numBack4='0033'>"
+								+"0033"
+							+"</span>"
+						+"</div>"
+					+"</div>"
+				+"</div>"
+							
+        $.actions({
+          title: title,
+          onClose: function() {
+            console.log("close");
+          },
+          actions: [
+            {
+              text: item,
+              className: "color-primary",
+              onClick: function() {
+              	$(".bank").attr("data-bank","中国农业银行");
+              	$(".numBack4").attr("data-numBack4","3877");
+               	$(".bank").text("中国农业银行");
+               	$(".numBack4").text("3877");
+              }
+            },
+            {
+              text: item2,
+              className: "color-primary",
+              onClick: function() {
+               	$(".bank").attr("data-bank","中国建设银行");
+              	$(".numBack4").attr("data-numBack4","0033");
+               	$(".bank").text("中国建设银行");
+               	$(".numBack4").text("0033");
+              }
+            },
+        
+          ]
+        });
+      });
+
+
+})
+
+</script>
+</body>
+</html>

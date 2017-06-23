@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>收款码</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta name="format-detection" content="telephone=no">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/weui.min.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/jquery-weui.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/font_main/iconfont.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/mains.css">
+	<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../asset/js/jquery-weui.min.js"></script>
+	<style type="text/css">
+	body{background: #0383fe;}
+	.u-bggray{background: #c5c4c4;}
+	.line{font-size: 15px;}
+	.f-borderR{border-right: 1px solid #cccbcb;}
+	</style>
+</head>
+<body>
+	<header>		
+		<div class="header_top caifu-bar">
+			<a href="chongzhi.html"><i class="iconfont arrow f-colorwhite">&#xe604;</i></a>
+				收款码	
+			<a href="chongzhi.html"><span class="u-textR">收款记录</span></a>	
+		</div>
+	</header>
+	<div class="content">
+		<div class="m-wrap pay">
+			<div class="bg_white wrap">
+				<p class="f-fsize16 f-tac">大唐天下APP扫一扫,向我付款</p>
+				<div class="code f-tac qrcodeTable">
+					<img src="../asset/image/code.png">
+				</div>
+				<p class="f-fsize14 f-tac f-colorgray">100%奖励,实时分账</p>
+				<div class="line f-tac">
+					<a href="#">
+						<div class="f-colorblue fl f-width50 f-borderR">设置收款</div>
+					</a>
+					<a href="../asset/image/code.png" download ="../asset/image/code.png">
+						<div class="f-colorblue fl f-width50">保存图片</div>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+			
+	</div>
+<script type="text/javascript">
+$(function(){
+
+	/*动态生成二维码*/
+	/*jQuery('.qrcodeTable').qrcode("http://" + host + "/Store/Code=" + Code);
+	//修改二维码样式
+		$(".qrcodeTable").find('canvas').css({
+			width: 160 + "px",
+			height: 160 + "px",
+	});
+
+	转换成png格式
+	var mycanvas = $(".qrcodeTable").find("canvas")[0];
+	var image = mycanvas.toDataURL("image/png");
+	$(".qrcodeTable").html("<img src='"+image+"' alt='from canvas'/>");	*/
+
+	
+	 
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+ /*绑定手机 */
+.phone .tip{margin: 10px;color: #999;line-height:20px}
+.phone .info{margin:10px;}
+.phone .info input{width:50%;margin-bottom:10px;height: 40px;display: block;padding: 0px;border: 0px;float: left; border-radius: 5px;font-size: 16px;padding: 0 5px;}
+.footer{position: fixed;background: white;width: 100%;bottom: 0;padding:10px;}
+.u-btn{background:#e33b3b;width: 80px;height: 40px;line-height: 40px;color: white;font-size: 14px;border-radius: 5px;text-align: center;float: right;}
+.shengnue{width:60%;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.fr{float: right;}
+.fl{float: left;}
+.bg_white{background: white;}
+.header_top{background: #f9f9f9; color:black; text-align: center;position: relative;height: 50px;line-height: 50px;font-size: 17px;}
+.header_top .arrow{position: absolute;left: 10px;font-size: 20px;}
+.fayan{width: 40%;background: #85d115;font-size: 15px;}
+.hang{height: 40px;line-height: 40px; color: #999;position: relative;margin-bottom: 10px;}
+.u-btn.submit{background: #15a9ff;font-size: 16px;line-height: 44px;}
+.not{color: #15a9ff;text-align: center;font-size: 16px;height: 40px;line-height: 40px;clear: both;}
+
+/* 文章中心 */
+.article{min-height: 550px;}
+.artImg{width:40px;height: 40px;float: left;margin-right: 10px;}
+.article a.list-group-item{height: 60px;position: relative;}
+.shengnuehao1{-webkit-line-clamp: 1;width: auto;text-overflow : clip;}
+.article .time{font-size: 8px;position: absolute;top: 8px;right: 10px;background: #f90;border-radius: 40px 0 0 0;color: white;padding: 0 3px 0 7px;}
+
+/* 商家申请 */
+.headerApply{background: #10BDFF;color: white;}
+.centerImg{background: #10BDFF; width: 130px;height: 80px;margin: 0 auto 10px auto;position: relative;border-radius: 8px;}
+.centerImg img{width: 60px; height: 60px;position: absolute;top: 10px;left: 35px;}
+.empty{height: 50px;width: auto;}
+.spotIcon1{position: absolute;left: 15px;top:180px;}
+.spotIcon1 img{width: 10px;height: 10px;}
+.spotIcon2{position: absolute;left: 35px;top:195px;}
+.spotIcon2 img{width: 20px;height: 20px;}
+.bar{width: 75%;margin:0 auto;height: 55px;line-height: 19px;margin-right: 20px;}
+.spotIcon3 img{width: 35px;height: 35px;float: left;}
+.spanClass{height: 100%;width: 50%;background: #10BDFF;padding: 0;margin: 0;}
+.spanBar{background: #ccc;height: 5px;width: 55%;float: left;margin-top: 16px;}
+.spotIcon5{position: absolute;right: 15px;top:180px;}
+.spotIcon5 img{width: 10px;height: 10px;}
+.spotIcon6{position: absolute;right: 35px;top:195px;}
+.spotIcon6 img{width: 20px;height: 20px;}
+.input-group .iconfont{font-size: 25px;color: #10BDFF;} 
+.applyInfo .input-group{ padding: 3px 0px;}  
+.applyInfo .input-group .input-group-addon{background-color: white;border: 0px;}
+.applyInfo .input-group .form-control{border: 0px;font-size: 16px;}
+.inputGroup{margin:0px 10px;}
+.inputGroup select{font-size: 16px;padding: 5px 12px; width: 85%;border:0px;border-top: 1px solid #f1efef;border-bottom: 1px solid #f1efef;}
+.u-btn1{background: #e33b3b; width: 80px;height: 40px;line-height: 40px;color: white;font-size: 14px; border-radius: 5px;text-align: center;}
+.applyBtn{background: #10BDFF;border-radius: 25px;width: 80%;margin:0 auto;font-size: 16px;margin: 40px auto 0 auto;}

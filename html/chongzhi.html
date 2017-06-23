@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>充值</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta name="format-detection" content="telephone=no">	
+		<link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/weui.min.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/jquery-weui.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/font_main/iconfont.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/mains.css">
+	<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../asset/js/jquery-weui.min.js"></script>
+	<style type="text/css">
+	body{background: #efefef;}
+	.u-bggray{background: #c5c4c4;}
+	</style>
+</head>
+<body>
+	<header>		
+		<div class="header_top caifu-bar">
+			<a href="zhanghu.html"><i class="iconfont arrow f-colorwhite">&#xe604;</i></a>
+				充值
+			<a href="record.html"><span class="u-textR">记录</span></a>
+		</div>
+	</header>
+	<div class="content">
+		<div class="m-wrap ">
+			<div class="inputGroup f-marginT10 bg_white">
+				<div class="input-group" style="margin-right: 10px;">
+				  <span class="input-group-addon bg_white f-colorblack">
+					  	充值金额
+					  </span>
+					  <input type="number" class="form-control" placeholder="请输入充值金额" aria-describedby="basic-addon1">
+				</div>
+			</div>
+			<p class="yu-e">当前现金账户余额0.00</p>
+			<a href="########" class="u-btnChongA">
+				<div class="u-btn u-btnChong u-bggray">充值</div>
+			</a>		
+		</div>
+	</div>
+<script type="text/javascript">
+$(function(){
+	$("input").bind("input propertychange",function(){
+		$(".u-btnChong").removeClass("u-bggray");
+		$(".u-btnChongA").attr("href","###");
+		if($(this).val()==""){
+			$(".u-btnChong").addClass("u-bggray");
+			$(".u-btnChongA").attr("href","#");
+		}
+	})
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+*{margin: 0;padding: 0;}
+html,body{width:100%;height: 100%; overflow-x: hidden; overflow-y: scroll;background: rgb(240,240,240); }
+li{list-style: none;}
+.cl-b {clear: both;}
+
+.header{position: fixed;top: 0; left: 0;right: 0; height: 50px;background: #428cf5;/*box-shadow: 0 -5px 10px 5px rgba(0,0,0,.2) inset;*/}
+.header .menu-left{float: left; width: 50px;height: 50px; margin-right: -50px; color: #FFF;}
+.header .menu-left b{display: block; width: 100%;height: 100%; line-height: 50px; font-weight: normal;}
+.header .title{float: left; width: 100%;height: 100%; margin: 0 50px; padding-right: 100px; line-height: 50px;text-align: center; color: #FFF; }
+
+/*顶部信息*/
+.view{width: 100%; margin: 50px auto; margin-bottom: 15px; padding-bottom: 20px;  background: #3ba2fb;}
+.text-box{width: 100%;height: 120px;}
+.text-box 			b{float:left; height: 100%;	width: 100px;margin-right: -100px;} /*s-l*/
+.text-box 	 div.text{float:left; height: 100%; width: 100%; margin-left:   100px; margin-right: -200px; padding-right: 200px; line-height: 30px; padding-top: 30px;} /*s-m*/
+.text-box  .check-btn{float:left; height: 100%; width: 100px;} /*s-r*/
+.check-btn .check,.check-btn .check span{display: block;}
+.check-btn .check{width: 64px;height: 30px; margin-top: 45px; margin-left: 10px;  line-height: 28px; text-align: center;  border-radius: 5px;box-shadow: 2px 2px 4px 4px rgba(0,0,0,.1);}
+.check-btn .check span{ width: 62px; height: 28px; margin-top: 1px; background: #3BA000; color: #FFF; border-radius: 6px; border: 1px solid #FFF;  box-shadow: 1px 1px 3px 3px rgba(255,255,255,.4)}
+.check-btn .check span:hover{ background: #e339b5; }
+.check-btn .check span.checked{ background: #999; }
+
+
+/*日历*/
+.check-box a{color: #FFF;}
+.check-week{width: 98%; margin: 0 auto; background: #428CF5; }
+.check-day{width: 98%; margin: 0 auto;  background: #3ba2fb;  }
+.check-box>a {display: block; width: 100%; height: 50px; line-height: 50px;  background: #428CF5; color: #FFF; text-align: center;}
+.check-box li{width: 14.2857%; float: left; height: 40px; color: #FFF; line-height: 40px;text-align: center;border-left: 1px solid #fefefe;border-bottom: 1px solid #fefefe; }
+.check-box li:nth-child(7n){border-right: 1px solid #fefefe;}
+.check-week li { border-top: 1px solid #fefefe; }
+.check-day li{background: #AAE;color: #FFF;}
+.check-day li.last-month{background: #BBBCD9;}
+.check-day li.check-days{background: #3ba2fb;}
+.check-day li.next-month{background: #BBBCD9;}
+.check-day li.check-theday{background: #e339b5;}
+.check-day>li>a {display: block; width: 100%;height: 100%; color: #FFF;}
+
+
+/*底部提示*/
+.text-box{}

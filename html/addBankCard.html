@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加银行卡</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta name="format-detection" content="telephone=no">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">		
+	<link rel="stylesheet" type="text/css" href="../asset/css/weui.min.css">			
+	<link rel="stylesheet" type="text/css" href="../asset/css/jquery-weui.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/font_main/iconfont.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/mains.css">
+	<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../asset/js/jquery-weui.min.js"></script>
+	<style type="text/css">
+	body{background: #efefef;}
+	.u-bggray{background: #c5c4c4;}
+	.inputGroup .input-group-addon{text-align: left;width: 35%;}
+	.input-group{width: 100%;}
+	.picker{border: 0px;font-size: 14px;padding-left: 12px;width: 100%;}
+	.toolbar .title{line-height: 0.2rem;}
+	.weui-dialog__btn{color: #0383fe;}
+	</style>
+</head>
+<body>
+	<header>		
+		<div class="header_top caifu-bar">
+			<a href="tixian.html"><i class="iconfont arrow f-colorwhite">&#xe604;</i></a>
+				添加银行卡			
+		</div>
+	</header>
+	
+	<div class="content">
+		<div class="m-wrap">
+			<div class="inputGroup bg_white f-borderT">
+				<div class="input-group f-relative">
+					  <span class="input-group-addon bg_white f-colorblack">
+					  	户主所属
+					  </span>
+					  <input type="text" class="picker" id='picker' placeholder="请选择户主所属" />
+				</div>
+				<div class="input-group f-relative">
+					  <span class="input-group-addon bg_white f-colorblack">
+					  	开户名
+					  </span>
+					  <input type="text" class="form-control name" placeholder="请填写开户名" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group f-relative">
+					  <span class="input-group-addon bg_white f-colorblack">
+					  	卡号
+					  </span>
+					  <input type="number" class="form-control cardNum" placeholder="请填写卡号" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group f-relative">
+					  <span class="input-group-addon bg_white f-colorblack">
+					  	开户行省
+					  </span>
+					  <input type="text" class="form-control" placeholder="请填写开户行省份 例如:广东" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group f-relative">
+					  <span class="input-group-addon bg_white f-colorblack">
+					  	开户行市
+					  </span>
+					  <input type="text" class="form-control" placeholder="请填写开户行市 例如:广州" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group f-relative">
+					  <span class="input-group-addon bg_white f-colorblack">
+					  	开户支行
+					  </span>
+					  <input type="text" class="form-control kaihu" placeholder="请务必填写正确的开户行" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group f-relative">
+					  <span class="input-group-addon bg_white f-colorblack">
+					  	银行
+					  </span>
+					  <input type="text" class="picker bank" id='picker2' placeholder="请选择银行" />
+				</div>
+				<div class="input-group f-relative">
+					  <span class="input-group-addon bg_white f-colorblack">
+					  	卡的类型
+					  </span>
+					  <input type="text" class="picker" id='picker3' placeholder="请选择卡类型" />
+				</div>					
+			</div>
+			<p class="f-fsize14 tip_text">请务必填写真实有效的银行卡号,并确认银行卡户名与你认证的姓名相同,否则,造成的资金错乱后果自负。</p>
+			<div class="u-btn u-btnChong">提交</div>
+		</div>
+				
+	</div>
+
+
+<script type="text/javascript" src="../asset/js/fastclick.js"></script>
+<script>
+$("#picker").picker({
+  title: "请选择户主所属",
+  cols: [
+    {
+      textAlign: 'center',
+      values: ['公司名称', '法人', '经营负责人', ]
+    }
+  ]
+});
+$("#picker2").picker({
+  title: "请选择银行",
+  cols: [
+    {
+      textAlign: 'center',
+      values: ['中国银行', '建设银行', '民生银行', ]
+    }
+  ]
+});
+$("#picker3").picker({
+  title: "请选择卡类型",
+  cols: [
+    {
+      textAlign: 'center',
+      values: ['储蓄卡',]
+    }
+  ]
+});
+
+$(function(){
+	$(".u-btnChong").on("click",function(){
+		var name=$(".name").val();
+		var cardNum=$(".cardNum").val();
+		var bank=$(".bank").val();
+		var kaihu=$(".kaihu").val();
+		var info="<p>请确认你的银行卡信息无误:</p>"
+			+"<p>户名:"
+			+name
+			+"</p>"
+			+"<p>银行卡:"
+			+cardNum
+			+"</p>"
+			+"<p>银行:"
+			+bank
+			+"</p>"
+			+"<p>开户行:"
+			+kaihu
+			+"</p>"
+		$.confirm(info, function() {
+		 	window.location.href="#";
+		 }, function() {
+		  //点击取消后的回调函数
+		});
+	})
+
+})
+</script>
+</body>
+</html>

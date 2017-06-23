@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>库存积分分发</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta name="format-detection" content="telephone=no">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/weui.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/jquery-weui.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/font_main/iconfont.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/mains.css">
+	<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../asset/js/jquery-weui.min.js"></script>
+	<style type="text/css">
+	body{background: #efefef;}
+	</style>
+</head>
+<body>
+<div class="page-view fade-out-left fade-in-view">
+	
+	<header>		
+		<div class="header_top caifu-bar">
+			<a class="fr f-colorwhite f-marginR15" href="">明细</a>
+			<i class="iconfont arrow">&#xe604;</i>
+			库存积分
+		</div>
+	</header>
+	<div class="content prise">
+		<div class="m-wrap">
+			<div class="my-total bg_250 f-borderT f-marginB15">
+				<img src="" alt="tupian">
+				<p class="f-fsize14">我的库存积分</p>
+				<a class="f-fsize25 hang" href="javascript:void(0)">0.000</a>
+			</div>
+			<div class="text-box">
+				<p class="text f-color9c f-fsize14">库存认购金额为1元=1250库存积分</p>
+			</div>
+			<div class="inputGroup f-marginT10 bg_white">
+				<div class="input-group f-width100 ">
+				  <span class="input-group-addon f-width30 bg_white f-colorblack ">
+				  	认购金额
+				  </span>
+				  <input type="number" class=" form-control" placeholder="请输入卖家手机号或账号" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group f-width100 ">
+					<span class="input-group-addon f-width30 bg_white f-colorblack">
+					  	开户名
+					</span>
+					<input type="number" class="form-control " placeholder="请输入对方消费金额" aria-describedby="basic-addon1">
+				</div>
+			</div>
+			<div class="change-prise f-fsize14">
+				<p>额度不够用？您可以申请&nbsp;&nbsp;<a href="">调额></a></p>
+			</div>
+			<div class="inputGroup f-marginB10 bg_white">
+				<div class="input-group f-width100 f-relative">
+					<span class="input-group-addon f-width30 bg_white f-colorblack">
+					  	奖励比例
+					</span>
+					<input type="text" class="input-reward form-control" placeholder="请选择奖励比例" value="100%" aria-describedby="basic-addon1">
+					<a class="reward f-block f-width70" href="javascript:void(0)">
+						  <b class="iconfont fr">&#xe62b;</b>
+					</a>
+				</div>
+				<div class="input-group f-width100 ">
+					<span class="input-group-addon f-width30 bg_white f-colorblack">
+					  	使用库存积分
+					</span>
+					<input type="number" class=" form-control" placeholder="消耗的库存积分" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group f-width100 ">
+					<span class="input-group-addon f-width30 bg_white f-colorblack">
+						交易说明
+					</span>
+					<input type="number" class=" form-control" placeholder="交易备注,以便你查询" aria-describedby="basic-addon1">
+				</div>
+			</div>
+			<div class="fenfa-text-box bg_white">
+				<p class="f-fsize14">注意:积分分发后,将直接录入对方积分账户,无法撤回,请谨慎操作。请确认该交易真实有效,如查实为虚假交易,平台将会对账号进行封号处理</p>
+			</div>
+			<div class="btn-box">
+				<a class="u-btn u-btn-default" href="">分发</a>
+		 	</div>
+		</div>
+	</div>
+</div>
+		<div class="reward-box fade-out-right">
+			<header>		
+				<div class="header_top caifu-bar">
+					<i class="iconfont arrow">&#xe604;</i>
+					选择比例
+				</div>
+			</header>
+			<div class="view f-fsize16">
+			<a vol="25" href="javascript:void(0)">25%</a>
+			<a vol="50" href="javascript:void(0)">50%</a>
+			<a vol="100" href="javascript:void(0)">100%</a>
+			<a vol="200" href="javascript:void(0)">200%</a>
+			<a vol="400" href="javascript:void(0)">400%</a>
+
+			</div>
+		</div>
+	<script>
+		window.onload = function(){
+			// $.post("",{},function(){
+			// 	$(".input-reward").val(data.val);
+			// })
+			$(".input-reward").val("100%");
+		}
+	$(function(){
+		$(".reward").click(function(){
+			$(".page-view").removeClass("fade-in-view");
+			$(".reward-box").addClass("fade-in-view");
+		})
+		$(".reward-box .view a").click(function(){
+			$(".input-reward").attr({"value":$(this).attr("vol")+"%","vol":$(this).attr("vol")});
+			$(".reward-box").removeClass("fade-in-view");
+			$(".page-view").addClass("fade-in-view");
+		})
+	})
+	</script>
+</body>
+</html>

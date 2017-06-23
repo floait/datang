@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设置收款</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta name="format-detection" content="telephone=no">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/weui.min.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/jquery-weui.min.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/font_main/iconfont.css">	
+	<link rel="stylesheet" type="text/css" href="../asset/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/mains.css">
+	<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../asset/js/jquery-weui.min.js"></script>
+	<style type="text/css">
+	.u-bggray{background: #c5c4c4;}
+	.line{font-size: 15px;}
+	.f-borderR{border-right: 1px solid #cccbcb;}
+	.money{text-align: right;font-size: 18px;}
+	.moneyGroup{height: 75px;line-height: 75px;margin-right: 19px;}
+	.weui-actionsheet__cell{font-size: 15px;}
+	.input-group{height: 35px;}
+	.bili,.method{text-align: right;margin-top: 6px;padding-right: 20px;}
+	.arrowa{position: absolute;right: 0px;top:0px;}
+	.tip{background: rgba(255, 226, 140, 0.68); color: #ff9d34;padding: 2px 10px;}
+	</style>
+</head>
+<body>
+	<header>		
+		<div class="header_top caifu-bar">
+			<a href="chongzhi.html">
+				<i class="iconfont arrow f-colorwhite">&#xe604;</i>
+			</a>
+				设置收款	
+		</div>
+	</header>
+	<div class="content">
+		<div class="m-wrap pay">
+			<div class="f-fsize15 tip">选择唐宝支付需支付5.0%的增值服务费</div>
+			<div class="inputGroup f-marginT10 bg_white">				
+				<div class="input-group moneyGroup">
+				  <span class="input-group-addon bg_white f-colorblack">
+					  	收款金额(元)
+					  </span>
+					  <input type="number" class="form-control money" placeholder="请输入收款金额" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group f-borderT" style="margin-right: 10px;">
+				 	  <span class="input-group-addon bg_white f-colorblack">
+					  	结算方式
+					  </span>
+					  <a href="javascript:;" id='show-actions' class="">
+					  		<div class="line bg_white method f-relative" data-id='0.08'>
+					  			自动扣减8%结算&nbsp;实时分账
+					  			<i class="iconfont arrowa ">&#xe62b;</i>
+					  		</div>
+					  </a>
+				</div>
+				<div class="input-group f-borderB" style="margin-right: 10px;">
+				  <span class="input-group-addon bg_white f-colorblack">
+					  	积分奖励比例
+					  </span>
+					  <a href="javascript:;" id='show-actions2' class="">
+					  		<div class="line bg_white  bili f-relative">
+					  			<span>100%</span>
+					  			<i class="iconfont arrowa ">&#xe62b;</i>
+					  		</div>
+					  </a>
+				</div>
+
+			</div>
+			<div class="empty"></div>
+			<a href="#">
+				<div class="u-btn u-btnChong">设置</div>
+			</a>
+		</div>
+			
+	</div>
+<script>
+      $(document).on("click", "#show-actions", function() {
+      	var method1="<div class='line bg_white method f-relative' data-id='0.08' >余"
+      				+"0.00"
+      				+"分  库存积分"
+					+"<i class='iconfont arrowa'>&#xe62b;</i>"
+					+"</div>"
+					
+		var method2="<div class='line bg_white method f-relative' data-id='0.08' >自动扣减8%结算&nbsp;实时分账"
+					+"<i class='iconfont arrowa'>&#xe62b;</i>"
+					+"</div>"
+        $.actions({
+          onClose: function() {
+            console.log("close");
+          },
+          actions: [
+            {
+              text: "库存积分模式",
+              className: "f-fsize15",
+              onClick: function() {
+                $("#show-actions").html(method1);
+              }
+            },
+             {
+              text: "分账模式",
+              className: "f-fsize15",
+              onClick: function() {
+                $("#show-actions").html(method2);
+              }
+            },
+          ]
+        });
+      });
+   /*"data":{"text":[25,50,100,200]}*/
+       $(document).on("click", "#show-actions2", function() {
+        $.actions({
+          onClose: function() {
+            console.log("close");
+          },
+          actions: [
+            {
+              text: "25%",
+              className: "f-fsize15",
+              onClick: function(text) {
+              	$(".bili span").text("25%");
+              }
+            },
+            {
+              text: "50%",
+              className: "f-fsize15",
+              onClick: function() {
+              	$(".bili span").text("50%");
+              	$(".bili").attr("data-val",0.5);
+              }
+            },
+            {
+              text: "100%",
+              className: "f-fsize15",
+              onClick: function() {
+              	$(".bili span").text("100%");
+              	$(".bili").attr("data-val",1);
+              }
+            },
+            {
+              text: "200%",
+              className: "f-fsize15",
+              onClick: function() {
+              	$(".bili span").text("200%");
+              	$(".bili").attr("data-val",2);
+              }
+            },
+          ]
+        });
+      });
+
+    </script>
+</body>
+</html>

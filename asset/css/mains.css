@@ -1,0 +1,95 @@
+/* 财富  谢沛豪 2017.6.21 */
+a{color: #333;}
+.caifu-bar{background: #0383fe;color: white;}
+.caifu-top{width:100%;height: 120px;background:#0383fe;color: white;padding:0  15px;font-size: 15px; }
+.caifu-top .money .iconfont{position: absolute;right: 10px;top:-15px;font-size: 25px;}
+.caifu-top .money {position: relative;}               
+.u-kuai{padding: 10px 10px 10px 50px;position: relative;height: 71px;}
+.u-kuai p{margin-bottom: 5px;font-size: 15px;}
+.u-kuai .iconfont{position: absolute;top: 5px;left: 15px;color:#ecaf1e;font-size: 23px;}
+.f-borderR{border-right: 1px solid #eee;}
+.f-borderB{border-bottom: 1px solid #eee;}
+.u-btext{color: #0383fe;position: absolute;right: 10px;top: 10px;}
+.shuju-tit{color:black;padding: 10px;font-size: 15px;clear: both;background: white;}
+.shuju-tit .iconfont{color: #0383fe;margin-right: 4px;}
+.caifu .center{height: 142px;background: white;}
+.u-shuju-kuai{width: 49%;padding: 10px 0px;background: #efefef;text-align: center;font-size: 15px;}
+.m-shujuInfo{background: white;height: 120px;padding: 10px 10px 20px 10px;}
+.u-shuju-kuai .f-shengnuehao{width: 100%;-webkit-line-clamp:1;}
+
+
+/* 现金账户 */
+.zhanghu{text-align: center;}
+.zhanghu img{width: auto;height: 100px;margin-bottom: 15px;}
+.moneyText{font-size: 20px;color: #3e78e6;margin-bottom: 0px;}
+.u-btnChong{background: #0383fe;height: 40px;line-height: 40px;width: 90%;margin:0 auto;}
+.u-btnTiXian{background: rgba(46, 113, 239, 0);height: 38px;line-height: 38px;width: 90%;margin:15px auto;color: #2e71ef; border:1px solid #2e71ef; }
+.inputGroup .input-group-addon,.inputGroup .form-control{border:0px;box-shadow:none;}
+.yu-e{padding: 10px 0 10px 10px;color: gray;}
+
+/* 全部记录 */
+.record .list-group-item{padding-right: 30px;}
+.record .list-group-item .iconfont{position: absolute;right: -25px;top:10px;font-size: 15px;}
+
+/* 记录详情 */
+.recordDetail{padding:10px 15px 0 10px;}
+.recordDetail .line{height: 30px;line-height: 20px;color: black;}
+
+/* 提现 */
+.tixian .line{background: #f5f4f4;color: black;padding:0 10px;height: 35px;line-height: 35px;border-radius: 5px;}
+.tixian .tip{color: gray;padding: 10px;}
+.record_xiala{width: 25%;background: white;position: absolute;right: 10px;top:40px;z-index: 2;text-align: center;border-radius: 5px;box-shadow: 0px  1px 1px  black;-webkit-box-shadow:  0px  1px 1px  black;transform: all 1s ease;}
+.record_xiala div{padding: 7px 0px;font-size: 13px;}
+
+/* 谢沛豪 2017.6.22  */
+/* 我的银行卡 */
+.cardOne{background: #3e78e6;border-radius: 5px;padding: 10px;margin-bottom: 10px;}
+
+/* 新增我的银行卡 */
+.tip_text{color: #d01818;padding: 10px 10px;}
+
+/* 明细 */
+.dropdown .nav{width: 33%;text-align: center;height: 40px;line-height: 40px;float: left;}
+.dropdown{height: 40px;background: white;    border-bottom: 1px solid #eee;}
+.dropdownList  ul li{list-style: none;text-align: center;color: white; background: rgba(115, 183, 247, 0.96);border-bottom: 1px solid #eee;height: 30px;line-height: 28px;}
+.dropdownList  ul li:active{background: #efefef;}
+.dropdown .active{color: #0383fe;}
+.detail .list-group .list-group-item{ border-left: 0px solid #ddd; border-right: 0px solid #ddd;}
+.dropdownList{position: absolute;top:44px;left: 0px;width: 100%;z-index: 2;}
+.meiyou img{width: auto;height: 140px;}
+.meiyou{text-align: center;padding-top: 10px;background: white;padding-bottom: 10px;}
+
+/* 谢沛豪2017.6.23 */
+/* 收款码 */
+.pay .wrap{padding: 20px;border-radius: 5px;height: auto;margin:20px 10px;}
+.code img{width:auto;height: 160px;}
+
+
+/* 秦献宗 2017.06.22 */
+/*我的库存积分*/
+.my-total {height: 200px; text-align: center; }
+.my-total img{display: block; width: 80px; height: 80px; margin: 10px auto;}
+.my-total a{color: rgb(0,135,255);}
+.btn-box{width: 100%;}
+.btn-box span {margin: 0 auto;}
+
+.text-box .text{text-indent: 1em;}
+.prise .inputGroup .input-group{height: 34px;}
+.prise .inputGroup span,
+.prise .inputGroup input{ padding-left: 0;padding-right: 0; }
+.prise .inputGroup span{text-align: right;}
+.prise .inputGroup input{text-indent: .5em;}
+.total-text-box p{padding: 10px;  color: #F00;}
+
+.prise .inputGroup a.reward{position: absolute;top: 0;right: 0;bottom: 0;z-index: 2}
+.prise .inputGroup .reward b{ line-height: 34px;}
+.change-prise {width: 100%;height: 30px; background: rgb(253,248,228);line-height: 30px;}
+.change-prise p{text-indent: 1em;color: rgb(250,170,62);}
+.change-prise p a{color: rgb(0,135,255);}
+.reward-box{display: block;position: fixed;width: 100%;top: 0;bottom: 0;z-index: 3;background: #FFF;}
+.reward-box a{display: block; width: 100%; height: 40px;line-height: 40px;border-bottom: 1px solid #eee;}
+.page-view{position: absolute;top: 0;width: 100%;}
+.page-view,.reward-box{-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease;transition:all 0.3s ease;}
+.fade-out-right{right: -100%;}
+.fade-out-left{right: 100%;}
+.fade-in-view{right: 0;}
